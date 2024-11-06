@@ -6,12 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./index.css">
-  <title>Pozzobom</title>
+  <title>Eduardo Pozzobom</title>
   <!-- Font Awesome for social media icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+  <div class="mac-menu-bar">
+    <div class="menu-left">
+      <span class="menu-item apple">
+        < Edu />
+      </span>
+      <span class="menu-item menu-item-projects">Projects</span>
+      <span class="menu-item menu-item-experiences">Experiences</span>
+      <span class="menu-item menu-item-contact">Contact</span>
+
+    </div>
+    <div class="menu-right">
+      <span class="menu-item"><i class="fas fa-battery-full"></i></span>
+      <span class="menu-item"><i class="fas fa-wifi"></i></span>
+      <span class="menu-item time" id="time">--:--</span>
+    </div>
+  </div>
   <div class="container">
     <div class="identification">
       <!-- Fake macOS Window Header -->
@@ -20,6 +36,9 @@
           <div class="close"></div>
           <div class="minimize"></div>
           <div class="expand"></div>
+        </div>
+        <div>
+          Identificação
         </div>
       </div>
       <div class="neon-divider"></div>
@@ -43,6 +62,9 @@
           <div class="minimize"></div>
           <div class="expand"></div>
         </div>
+        <div>
+          Informações
+        </div>
       </div>
       <div class="neon-divider"></div>
       <div class="content">
@@ -61,7 +83,72 @@
         </pre>
       </div>
     </div>
+
+    <div class="window projects-window hidden">
+      <div class="window-header">
+        <div class="mac-buttons">
+          <div class="close" onclick="toggleWindow('projects-window')"></div>
+          <div class="minimize"></div>
+          <div class="expand"></div>
+        </div>
+        <div>Projetos</div>
+      </div>
+      <div class="neon-divider"></div>
+      <div class="content">
+        <!-- Project Cards -->
+        <div class="project-card">
+          <h3>Project Name</h3>
+          <p>Description of the project.</p>
+          <span>Language: JavaScript</span>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+
+    <!-- Experiences Window -->
+    <div class="window experiences-window hidden">
+      <div class="window-header">
+        <div class="mac-buttons">
+          <div class="close" onclick="toggleWindow('experiences-window')"></div>
+          <div class="minimize"></div>
+          <div class="expand"></div>
+        </div>
+        <div>Experiências</div>
+      </div>
+      <div class="neon-divider"></div>
+      <div class="content">
+        <!-- Experience Cards -->
+        <div class="experience-card">
+          <h3>Company Name</h3>
+          <p>Period: Jan 2020 - Dec 2021</p>
+          <span>Technologies: React, Node.js, AWS</span>
+        </div>
+        <!-- Add more experience cards as needed -->
+      </div>
+    </div>
+
+    <!-- Contact Window -->
+    <div class="window contact-window hidden">
+      <div class="window-header">
+        <div class="mac-buttons">
+          <div class="close" onclick="toggleWindow('contact-window')"></div>
+          <div class="minimize"></div>
+          <div class="expand"></div>
+        </div>
+        <div>Contato</div>
+      </div>
+      <div class="neon-divider"></div>
+      <div class="content">
+        <p>Email: eduardo@example.com</p>
+        <p>Telefone: (123) 456-7890</p>
+      </div>
+    </div>
+
+
   </div>
+
 </body>
+
+<script src="script.js"></script>
 
 </html>
