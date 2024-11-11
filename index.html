@@ -1,75 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Eduardo Pozzobom</title>
+    <!-- Font Awesome for social media icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./index.css">
-  <title>Eduardo Pozzobom</title>
-  <!-- Font Awesome for social media icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-
-<body>
-  <div class="mac-menu-bar">
-    <div class="menu-left">
-      <span class="menu-item apple">
-        < Edu />
-      </span>
-      <span class="menu-item menu-item-projects">Projects</span>
-      <span class="menu-item menu-item-experiences">Experiences</span>
-      <span class="menu-item menu-item-contact">Contact</span>
-
-    </div>
-    <div class="menu-right">
-      <span class="menu-item"><i class="fas fa-battery-full"></i></span>
-      <span class="menu-item"><i class="fas fa-wifi"></i></span>
-      <span class="menu-item time" id="time">--:--</span>
-    </div>
-  </div>
-  <div class="container">
-    <div class="identification">
-      <!-- Fake macOS Window Header -->
-      <div class="window-header">
-        <div class="mac-buttons">
-          <div class="close"></div>
-          <div class="minimize"></div>
-          <div class="expand"></div>
-        </div>
-        <div>
-          Identificação
-        </div>
+  <body>
+    <div class="mac-menu-bar">
+      <div class="menu-left">
+        <span class="menu-item apple"> < Edu /> </span>
+        <span class="menu-item menu-item-projects">Projetos</span>
+        <span class="menu-item menu-item-experiences">Experiências</span>
+        <span class="menu-item menu-item-contact">Contato</span>
       </div>
-      <div class="neon-divider"></div>
-      <div class="content">
-        <img class="foto" src="./assets/minha_foto.jpg" alt="Minha foto" />
-        <h3 class="nome">Eduardo Alexandre Pozzobom</h3>
-        <p>Desenvolvedor Full Stack</p>
-        <div class="social-media">
-          <a href="https://www.linkedin.com/in/eduardo-pozzobom-196b7a1b3/" target="_blank" class="social-link"><i
-              class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/EduPZz/portifolio-unasp" target="_blank" class="social-link"><i
-              class="fab fa-github"></i></a>
-        </div>
+      <div class="menu-right">
+        <span class="menu-item"><i class="fas fa-battery-full"></i></span>
+        <span class="menu-item"><i class="fas fa-wifi"></i></span>
+        <span class="menu-item time" id="time">--:--</span>
       </div>
     </div>
-
-    <div class="information">
-      <div class="window-header">
-        <div class="mac-buttons">
-          <div class="close"></div>
-          <div class="minimize"></div>
-          <div class="expand"></div>
+    <div class="container">
+      <div class="identification">
+        <!-- Fake macOS Window Header -->
+        <div class="window-header">
+          <div class="mac-buttons">
+            <div class="close"></div>
+            <div class="minimize"></div>
+            <div class="expand"></div>
+          </div>
+          <div>Identificação</div>
         </div>
-        <div>
-          Informações
+        <div class="neon-divider"></div>
+        <div class="content">
+          <img class="foto" src="./assets/minha_foto.jpg" alt="Minha foto" />
+          <h3 class="nome">Eduardo Alexandre Pozzobom</h3>
+          <p>Desenvolvedor Full Stack</p>
+          <div class="social-media">
+            <a
+              href="https://www.linkedin.com/in/eduardo-pozzobom-196b7a1b3/"
+              target="_blank"
+              class="social-link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/EduPZz/portifolio-unasp"
+              target="_blank"
+              class="social-link"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
         </div>
       </div>
-      <div class="neon-divider"></div>
-      <div class="content">
-        <!-- Code Block -->
-        <pre class="code-block">
+
+      <div class="information">
+        <div class="window-header">
+          <div class="mac-buttons">
+            <div class="close"></div>
+            <div class="minimize"></div>
+            <div class="expand"></div>
+          </div>
+          <div>Informações</div>
+        </div>
+        <div class="neon-divider"></div>
+        <div class="content">
+          <!-- Code Block -->
+          <pre class="code-block">
 <code>
 <span class="keyword">const</span> coder = {
   <span class="property">name</span>: <span class="string">'Eduardo'</span>,
@@ -81,74 +87,99 @@
 }
 </code>
         </pre>
+        </div>
+      </div>
+
+      <div class="window projects-window hidden">
+        <div class="window-header">
+          <div class="mac-buttons">
+            <div class="close" onclick="toggleWindow('projects-window')"></div>
+            <div class="minimize"></div>
+            <div class="expand"></div>
+          </div>
+          <div>Projetos</div>
+        </div>
+        <div class="neon-divider"></div>
+        <div class="content">
+          <!-- Project Cards -->
+          <div class="project-card">
+            <h3>Starployee</h3>
+            <p>Uma rede social que conecta investidores e startups.</p>
+            <span>Tecnologias: React</span>
+          </div>
+          <div class="project-card">
+            <h3>Onzemais</h3>
+            <p>Site para alugar quadras e acessórios para futebol.</p>
+            <span>Tecnologias: React, NextJS, MySql</span>
+          </div>
+          <div class="project-card">
+            <h3>Health Monitor</h3>
+            <p>
+              Projeto que apresenta informações em tempo real sobre a saúde o
+              usuário.
+            </p>
+            <span>Language: React, NextJS, Postgres</span>
+          </div>
+          <!-- Add more project cards as needed -->
+        </div>
+      </div>
+
+      <!-- Experiences Window -->
+      <div class="window experiences-window hidden">
+        <div class="window-header">
+          <div class="mac-buttons">
+            <div
+              class="close"
+              onclick="toggleWindow('experiences-window')"
+            ></div>
+            <div class="minimize"></div>
+            <div class="expand"></div>
+          </div>
+          <div>Experiências</div>
+        </div>
+        <div class="neon-divider"></div>
+        <div class="content">
+          <!-- Experience Cards -->
+          <div class="experience-card">
+            <h3>Crespo e Caires</h3>
+            <br />
+            <p>Período: Maio de 2022 - Julho de 2022</p>
+            <span
+              >Competências: Atendimento ao cliente, Hardware, Microsoft Windows
+              e Office 365</span
+            >
+          </div>
+          <div class="experience-card">
+            <h3>Bradial Digital Solutions</h3>
+            <br />
+            <p>Período: Julho de 2022 - Momento</p>
+            <span
+              >Competências: React, Vue 2, Ruby On Rails, Postgres e
+              Docker</span
+            >
+          </div>
+          <!-- Add more experience cards as needed -->
+        </div>
+      </div>
+
+      <!-- Contact Window -->
+      <div class="window contact-window hidden">
+        <div class="window-header">
+          <div class="mac-buttons">
+            <div class="close" onclick="toggleWindow('contact-window')"></div>
+            <div class="minimize"></div>
+            <div class="expand"></div>
+          </div>
+          <div>Contato</div>
+        </div>
+        <div class="neon-divider"></div>
+        <div class="content">
+          <p>Email: eduardo.pozzogood@hotmail.com</p>
+          <p>Telefone: (19) 99955-3509</p>
+        </div>
       </div>
     </div>
+  </body>
 
-    <div class="window projects-window hidden">
-      <div class="window-header">
-        <div class="mac-buttons">
-          <div class="close" onclick="toggleWindow('projects-window')"></div>
-          <div class="minimize"></div>
-          <div class="expand"></div>
-        </div>
-        <div>Projetos</div>
-      </div>
-      <div class="neon-divider"></div>
-      <div class="content">
-        <!-- Project Cards -->
-        <div class="project-card">
-          <h3>Project Name</h3>
-          <p>Description of the project.</p>
-          <span>Language: JavaScript</span>
-        </div>
-        <!-- Add more project cards as needed -->
-      </div>
-    </div>
-
-    <!-- Experiences Window -->
-    <div class="window experiences-window hidden">
-      <div class="window-header">
-        <div class="mac-buttons">
-          <div class="close" onclick="toggleWindow('experiences-window')"></div>
-          <div class="minimize"></div>
-          <div class="expand"></div>
-        </div>
-        <div>Experiências</div>
-      </div>
-      <div class="neon-divider"></div>
-      <div class="content">
-        <!-- Experience Cards -->
-        <div class="experience-card">
-          <h3>Company Name</h3>
-          <p>Period: Jan 2020 - Dec 2021</p>
-          <span>Technologies: React, Node.js, AWS</span>
-        </div>
-        <!-- Add more experience cards as needed -->
-      </div>
-    </div>
-
-    <!-- Contact Window -->
-    <div class="window contact-window hidden">
-      <div class="window-header">
-        <div class="mac-buttons">
-          <div class="close" onclick="toggleWindow('contact-window')"></div>
-          <div class="minimize"></div>
-          <div class="expand"></div>
-        </div>
-        <div>Contato</div>
-      </div>
-      <div class="neon-divider"></div>
-      <div class="content">
-        <p>Email: eduardo@example.com</p>
-        <p>Telefone: (123) 456-7890</p>
-      </div>
-    </div>
-
-
-  </div>
-
-</body>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </html>
